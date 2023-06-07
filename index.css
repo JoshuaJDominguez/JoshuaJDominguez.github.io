@@ -43,9 +43,7 @@ a{
   height: 900px;
   width: 1000px;
 }
-body{
-  b;
-}
+
 /* portfolio styles */
 .content h1 {
   color: White;
@@ -71,8 +69,31 @@ body{
   text-decoration: none;
   color: #454545;
 }
+   /* portfolio styles */
+   .content h1 {
+    color: white;
+}
 
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
 
+#portfolio li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: #eee;
+}
+
+#portfolio a {
+    text-decoration: none;
+    color: #454545;
+}
 
 
 
