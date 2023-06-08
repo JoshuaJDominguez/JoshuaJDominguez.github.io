@@ -27,38 +27,66 @@ $(function () {
      * This can give you a better idea of where to create new platforms
      * You won't be able to play the game while these lines are uncommented
      * Comment the lines out to remove the grid
-     */
+    */
+   
+   // Loop to create vertical grid lines
+   // for (let i = 100; i < canvas.width; i += 100) {
+     //   createPlatform(i, 0, 1, canvas.height);
+     // }
+     
+     // Loop to create horizontal gride lines
+     // for (let i = 100; i < canvas.height; i += 100) {
+       //   createPlatform(0, i, canvas.width, 1);
+       // }
+       
+       /////////////////////////////////////////////////
+       //////////ONLY CHANGE BELOW THIS POINT///////////
+       /////////////////////////////////////////////////
+       
+       // TODO 1
+       // Create platforms
+       // You must decide the x position, y position, width, and height of the platforms
+       // example usage: createPlatform(x,y,width,height)
+       createPlatform(0, 540, 90, 5);
 
-    // Loop to create vertical grid lines
-    // for (let i = 100; i < canvas.width; i += 100) {
-    //   createPlatform(i, 0, 1, canvas.height);
-    // }
+       createPlatform(200, 480, 80, 5);
+       
+       createPlatform(380, 420, 80, 5);
 
-    // Loop to create horizontal gride lines
-    // for (let i = 100; i < canvas.height; i += 100) {
-    //   createPlatform(0, i, canvas.width, 1);
-    // }
+       createPlatform(680, 400, 5, 200);
 
-    /////////////////////////////////////////////////
-    //////////ONLY CHANGE BELOW THIS POINT///////////
-    /////////////////////////////////////////////////
+       createPlatform(680, 600, 80, 5);
 
-    // TODO 1
-    // Create platforms
-    // You must decide the x position, y position, width, and height of the platforms
-    // example usage: createPlatform(x,y,width,height)
+       createPlatform(680, 195, 5, 100 );
 
+       createPlatform(670, 400, 30, 5);
 
+       createPlatform(890, 600, 150, 5);
 
-    
-    // TODO 2
-    // Create collectables
-    // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
-    // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
-    // example usage: createCollectable(type, x, y, gravity, bounce)
+       createPlatform(960, 400, 5, 200);
 
+       createPlatform(1200, 680, 60, 5);
 
+       createPlatform(680, 600, 5, 200);
 
+       createPlatform(1100, 480, 60, 5);
+
+       createPlatform(1100, 300, 500, 5);
+
+       createPlatform(500, 190, 800, 5);
+       
+       // TODO 2
+       // Create collectables
+       // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
+       // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
+       // example usage: createCollectable(type, x, y, gravity, bounce)
+       
+       createCollectable('database', 665, 350, 0, 10)
+       createCollectable('database', 1300, 500, 0, 10)
+       createCollectable('database', 1360, 20, 0, 10)
+  
+       
+       
 
     // TODO 3
     // Create cannons
@@ -66,9 +94,19 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 
-
-
-
+    createCannon("bottom", 50, 400)
+    createCannon("bottom", 100, 400 )
+    createCannon("bottom", 200 , 1000 )
+    createCannon("bottom", 400 , 800 )
+    createCannon("left", 270 , 2000 )
+    createCannon("bottom", 600 , 2000)
+    createCannon("bottom", 700 , 900 )
+    createCannon("bottom",  800, 1000)
+    createCannon("bottom",  900, 2000)
+    createCannon("bottom",  1000, 1000)
+    createCannon("bottom",  1100, 1200)
+    createCannon("bottom", 1200 , 1200 )
+   
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
