@@ -8,18 +8,22 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: goldenrod;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 355px;
 			
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
+		}
+		body{
+			background-color: lightgray;
+			color: white;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -40,7 +44,7 @@
 			
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
-			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+			var boardWidth = 1350;	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -64,7 +68,8 @@
 			
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
-
+			var points = 0 
+			var speed = 10;
 
 			
 			/* 
@@ -74,13 +79,18 @@
 			*/
 			function update() {
 				//Increase positionX by 10 HERE
-				positionX = positionX + 10
-				moveBoxTo(positionX);
+				positionX = positionX + speed;
 
-				positionX = positionX + 10
-				moveBoxTo(positionX);
-		
 
+				moveBoxTo(positionX + speed);
+
+				if (positionX > boardWidth) {
+					speed = -speed; 
+				}
+				
+				if (positionX < 0) {
+					speed = speed + 3;
+				}
 			};
 
 
@@ -92,6 +102,17 @@
 			function handleBoxClick() {
 				positionX = 0;
 
+				points = points + 1; 
+
+				alert('I\'m only here to annoy you!');
+
+				changeBoxText(points);
+
+	if (speed > 0) {
+		speed = speed + 3;
+	} else if (speed < 0) {
+		speed = speed - 3;
+	}
 
 			};
 		})();
