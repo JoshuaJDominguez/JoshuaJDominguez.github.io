@@ -66,8 +66,9 @@ circles.push(circle);
             // TODO 9 : Iterate over the array
             for (var i = 0; i <= circles.length - 1; i++) {
                 // code to repeat using i
-                physikz.updatePosition(i);
+                
                 physikz.updatePosition(circles[i])
+                game.checkCirclePosition(circles[i])
               }
             
         }
