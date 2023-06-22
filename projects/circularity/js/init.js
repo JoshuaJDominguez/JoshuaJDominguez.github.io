@@ -40,7 +40,7 @@ circles.push(circle);
         drawCircle();
         drawCircle();*/
 
-        for (var i = 0; i <= 10; i++) {
+        for (var i = 0; i <= 100; i++) {
             drawCircle(i);
         }
 
@@ -55,23 +55,18 @@ circles.push(circle);
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(circles[0]);
-            physikz.updatePosition(circles[1]);
-            physikz.updatePosition(circles[2]);
-            physikz.updatePosition(circles[3]);
-            physikz.updatePosition(circles[4]);
+            /*this was deleted because of the loop I made around line 64; the loop was a more efficient-
+            and easy to edit way of doing things, so it's figured that the loop should be kept-
+            versus the several identically called functions*/
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(circles[0]);
-            game.checkCirclePosition(circles[1]);
-            game.checkCirclePosition(circles[2]);
-            game.checkCirclePosition(circles[3]);
-            game.checkCirclePosition(circles[4]);
+            /*This was also deleted because of a loop, loops are simply more efficient,-
+            plus it's not good practice to ignore the DRY rule of code!*/
 
             // TODO 9 : Iterate over the array
-            for (var j = 0; j <= circles.length; j++) {
+            for (var i = 0; i <= circles.length - 1; i++) {
                 // code to repeat using i
-                physikz.updatePosition(j);
+                physikz.updatePosition(i);
                 physikz.updatePosition(circles[i])
               }
             
