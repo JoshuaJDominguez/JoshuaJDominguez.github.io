@@ -90,10 +90,10 @@ circles.push(circle);
                 circle.y = 0;
             }//going off of left
             if ( circle.y < 0) {
-                circle.y = 0;//going off of top height
+                circle.y = canvas.height;//going off of top height
             }
             if ( circle.x < 0 ) {
-                circle.x = 0;//going off of bottom height
+                circle.x = canvas.width;//going off of bottom height
             }
 
 
