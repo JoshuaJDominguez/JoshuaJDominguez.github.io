@@ -95,7 +95,10 @@ circles.push(circle);
             if ( circle.x < 0 ) {
                 circle.x = canvas.width;//going off of bottom height
             }
+            var rightEdge = circle.x + circle.radius;
+            var leftEdge = circle.y + circle.radius;
 
+  
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
