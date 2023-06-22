@@ -86,13 +86,13 @@ circles.push(circle);
             }//going off of right
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            if ( circle.y > canvas.width ) {
+            if ( circle.y > canvas.height ) {
                 circle.y = 0;
             }//going off of left
-            if ( circle.y > canvas.height ) {
+            if ( circle.y < 0) {
                 circle.y = 0;//going off of top height
             }
-            if ( circle.x > canvas.height ) {
+            if ( circle.x < 0 ) {
                 circle.x = 0;//going off of bottom height
             }
 
